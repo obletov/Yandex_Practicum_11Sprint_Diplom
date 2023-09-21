@@ -1,0 +1,12 @@
+\dt  \\ список всех таблиц
+\dt+ \\ список всех таблиц
+
+select * from "Couriers";    \\ Просмотр таблицы Couriers
+select * from "Orders";      \\ Просмотр таблицы Orders
+
+
+
+\\Вывод списка курьеров с количеством их заказов в статусе «В доставке» (поле inDelivery = true). 
+SELECT c.login, COUNT(o.*) AS order_count FROM "Couriers" c JOIN "Orders" o ON c.id = o."courierId" WHERE o."inDelivery" = true GROUP BY c.login;
+
+
