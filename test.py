@@ -12,6 +12,3 @@ def test_create_and_get_order():
 
 response = sender_stand_request.post_new_order()
 
-print(response.status_code)
-print(response.headers)
-print(response.json)
